@@ -1,0 +1,3 @@
+/home/ewonn/Documents/Computer Graphics and Visual Computing/build/CMakeFiles/FreeglutApp.dir
+/home/ewonn/Documents/Computer Graphics and Visual Computing/build/CMakeFiles/edit_cache.dir
+/home/ewonn/Documents/Computer Graphics and Visual Computing/build/CMakeFiles/rebuild_cache.dir
