@@ -2,7 +2,7 @@ FreeglutApp: \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/crt1.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/crti.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o \
-  CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o \
+  CMakeFiles/FreeglutApp.dir/src/main.cpp.o \
   CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o \
   CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o \
   CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o \
@@ -67,7 +67,7 @@ FreeglutApp: \
 
 /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o:
 
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o:
+CMakeFiles/FreeglutApp.dir/src/main.cpp.o:
 
 CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o:
 

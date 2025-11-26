@@ -9,13 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/AudioManager.cpp" "CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o.d"
-  "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/DiazGroup_FirstScene_New.cpp" "CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/DrawingUtils.cpp" "CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/Scene1_BikeInGarage.cpp" "CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/Scene2_GarageTakeoff.cpp" "CMakeFiles/FreeglutApp.dir/src/Scene2_GarageTakeoff.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/Scene2_GarageTakeoff.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/Scene3_MeetingFriends.cpp" "CMakeFiles/FreeglutApp.dir/src/Scene3_MeetingFriends.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/Scene3_MeetingFriends.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/Scene4_GroupBiking.cpp" "CMakeFiles/FreeglutApp.dir/src/Scene4_GroupBiking.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/Scene4_GroupBiking.cpp.o.d"
   "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/Scene5_FinalPose.cpp" "CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.o.d"
+  "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/main.cpp" "CMakeFiles/FreeglutApp.dir/src/main.cpp.o" "gcc" "CMakeFiles/FreeglutApp.dir/src/main.cpp.o.d"
   "" "FreeglutApp" "gcc" "CMakeFiles/FreeglutApp.dir/link.d"
   )
 

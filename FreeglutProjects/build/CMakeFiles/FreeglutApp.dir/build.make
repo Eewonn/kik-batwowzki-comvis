@@ -72,19 +72,19 @@ include CMakeFiles/FreeglutApp.dir/flags.make
 CMakeFiles/FreeglutApp.dir/codegen:
 .PHONY : CMakeFiles/FreeglutApp.dir/codegen
 
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o: CMakeFiles/FreeglutApp.dir/flags.make
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o: /home/ewonn/Documents/Computer\ Graphics\ and\ Visual\ Computing/FreeglutProjects/src/DiazGroup_FirstScene_New.cpp
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o: CMakeFiles/FreeglutApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o -MF CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o.d -o CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o -c "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/DiazGroup_FirstScene_New.cpp"
+CMakeFiles/FreeglutApp.dir/src/main.cpp.o: CMakeFiles/FreeglutApp.dir/flags.make
+CMakeFiles/FreeglutApp.dir/src/main.cpp.o: /home/ewonn/Documents/Computer\ Graphics\ and\ Visual\ Computing/FreeglutProjects/src/main.cpp
+CMakeFiles/FreeglutApp.dir/src/main.cpp.o: CMakeFiles/FreeglutApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FreeglutApp.dir/src/main.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeglutApp.dir/src/main.cpp.o -MF CMakeFiles/FreeglutApp.dir/src/main.cpp.o.d -o CMakeFiles/FreeglutApp.dir/src/main.cpp.o -c "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/main.cpp"
 
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/DiazGroup_FirstScene_New.cpp" > CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.i
+CMakeFiles/FreeglutApp.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FreeglutApp.dir/src/main.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/main.cpp" > CMakeFiles/FreeglutApp.dir/src/main.cpp.i
 
-CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/DiazGroup_FirstScene_New.cpp" -o CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.s
+CMakeFiles/FreeglutApp.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FreeglutApp.dir/src/main.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ewonn/Documents/Computer Graphics and Visual Computing/FreeglutProjects/src/main.cpp" -o CMakeFiles/FreeglutApp.dir/src/main.cpp.s
 
 CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o: CMakeFiles/FreeglutApp.dir/flags.make
 CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o: /home/ewonn/Documents/Computer\ Graphics\ and\ Visual\ Computing/FreeglutProjects/src/AudioManager.cpp
@@ -186,7 +186,7 @@ CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.s: cmake_force
 
 # Object files for target FreeglutApp
 FreeglutApp_OBJECTS = \
-"CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o" \
+"CMakeFiles/FreeglutApp.dir/src/main.cpp.o" \
 "CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o" \
 "CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o" \
 "CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o" \
@@ -198,7 +198,7 @@ FreeglutApp_OBJECTS = \
 # External object files for target FreeglutApp
 FreeglutApp_EXTERNAL_OBJECTS =
 
-FreeglutApp: CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o
+FreeglutApp: CMakeFiles/FreeglutApp.dir/src/main.cpp.o
 FreeglutApp: CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o
 FreeglutApp: CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o
 FreeglutApp: CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o
