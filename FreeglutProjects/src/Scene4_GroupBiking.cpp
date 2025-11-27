@@ -61,16 +61,16 @@ void Scene4_GroupBiking::render() {
         glPushMatrix();
         glTranslatef(xOffset, 0.0f, zOffset);
         
-        // Leader does wheelies occasionally!
+        // Leader does wheelies occasionally! Front wheel UP!
         if (i == 0 && fmodf(sceneTimer, 4.0f) < 1.5f) {
             float wheeliePhase = fmodf(sceneTimer, 4.0f) / 1.5f;
             float wheelieAngle = sinf(wheeliePhase * 3.14159f) * 15.0f;
-            glRotatef(-wheelieAngle, 0, 0, 1);
-            drawBike();
-            drawStickmanWheelie(walkPhase, helmetHues[i], wheelieAngle * 0.5f);
+            glRotatef(wheelieAngle, 0, 0, 1);  // Positive angle = front wheel UP
+            drawBike(i);  // Color based on rider index
+            drawStickmanWheelie(walkPhase, helmetHues[i], wheelieAngle * 0.5f, i);
         } else {
-            drawBike();
-            drawStickmanOnBike(walkPhase + i * 0.4f, helmetHues[i]);
+            drawBike(i);  // Color based on rider index
+            drawStickmanOnBike(walkPhase + i * 0.4f, helmetHues[i], i);
         }
         glPopMatrix();
     }

@@ -6,8 +6,8 @@
 void drawCylinder(float base, float top, float height, int slices);
 void drawSphereSolid(float radius);
 void drawStickman(float phase, float helmetHue = 0.9f); // helmetHue: 0.0-1.0 for different colors
-void drawBike();
-void drawStickmanOnBike(float pedalPhase, float helmetHue = 0.9f); // Proper seated position
+void drawBike(int colorIndex = 0);  // colorIndex 0-4 for 5 different vibrant colors
+void drawStickmanOnBike(float pedalPhase, float helmetHue, int colorIndex = 0); // Proper seated position with bike color
 void drawGarage();
 void drawGarageDoor(float openProgress); // 0.0 = closed, 1.0 = fully open
 void drawOutdoorEnvironment(); // Road, sky, sun, trees
@@ -22,8 +22,8 @@ void drawSpeedLines(float x, float y, float z, float intensity, float direction 
 void drawImpactBurst(float x, float y, float z, float size, float phase);
 void drawZoomLines(float centerX, float centerY, float intensity);
 void drawDustCloud(float x, float y, float z, float size, float age);
-void drawStickmanWheelie(float pedalPhase, float helmetHue, float wheelieAngle);
-void drawStickmanVictory(float phase, float helmetHue);
+void drawStickmanWheelie(float pedalPhase, float helmetHue, float wheelieAngle, int colorIndex = 0);
+void drawStickmanVictory(float phase, float helmetHue, int colorIndex = 0);
 void drawActionText(const char* text, float x, float y, float size, float r, float g, float b);
 
 #endif // DRAWING_UTILS_H

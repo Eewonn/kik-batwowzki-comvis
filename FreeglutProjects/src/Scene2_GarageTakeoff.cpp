@@ -40,17 +40,17 @@ void Scene2_GarageTakeoff::render() {
     glPushMatrix();
     glTranslatef(stickmanX, 0.0f, 0.0f);
     
-    // Occasional wheelies for style!
+    // Occasional wheelies for style! Front wheel UP!
     float wheelieCycle = fmodf(sceneTimer, 3.0f);
     if (wheelieCycle < 1.0f && stickmanX > 0.0f) {
         float wheeliePhase = sinf(wheelieCycle * 3.14159f);
         float wheelieAngle = wheeliePhase * 15.0f;
-        glRotatef(-wheelieAngle, 0, 0, 1);
-        drawBike();
-        drawStickmanWheelie(pedalPhase, 0.9f, wheelieAngle * 0.4f);
+        glRotatef(wheelieAngle, 0, 0, 1);  // Positive angle = front wheel UP
+        drawBike(0);  // Hot Pink bike
+        drawStickmanWheelie(pedalPhase, 0.9f, wheelieAngle * 0.4f, 0);
     } else {
-        drawBike();
-        drawStickmanOnBike(pedalPhase, 0.9f);
+        drawBike(0);  // Hot Pink bike
+        drawStickmanOnBike(pedalPhase, 0.9f, 0);
     }
     glPopMatrix();
     

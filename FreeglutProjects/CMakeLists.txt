@@ -23,7 +23,7 @@ add_definitions(${OPENGL_DEFINITIONS} ${GLUT_DEFINITIONS})
 
 # Multi-scene modular version
 add_executable(FreeglutApp 
-    src/DiazGroup_FirstScene_New.cpp 
+    src/main.cpp
     src/AudioManager.cpp
     src/DrawingUtils.cpp
     src/Scene1_BikeInGarage.cpp

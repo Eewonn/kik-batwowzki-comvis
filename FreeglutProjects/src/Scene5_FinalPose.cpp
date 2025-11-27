@@ -40,14 +40,14 @@ void Scene5_FinalPose::render() {
         
         // All doing victory poses!
         if (sceneTimer > 1.0f) {
-            drawBike();
-            drawStickmanVictory(sceneTimer + i * 0.3f, helmetHues[i]);
+            drawBike(i);  // Each rider has unique bike color
+            drawStickmanVictory(sceneTimer + i * 0.3f, helmetHues[i], i);
         } else {
             // Quick skid-stop animation at start
             float skidProgress = sceneTimer;
             glRotatef(-skidProgress * 20.0f, 0, 0, 1);
-            drawBike();
-            drawStickmanOnBike(sceneTimer * 10.0f, helmetHues[i]);
+            drawBike(i);  // Each rider has unique bike color
+            drawStickmanOnBike(sceneTimer * 10.0f, helmetHues[i], i);
             
             // Dust from skid
             if (i == 0) {
@@ -91,53 +91,116 @@ void Scene5_FinalPose::render() {
         float pulse = 1.0f + sinf(sceneTimer * 6.0f) * 0.05f;
         float scale = fadeIn * pulse;
         
-        // Draw bold background burst behind text
         glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
-        // Starburst effect behind logo
-        int numRays = 24;
-        for (int i = 0; i < numRays; i++) {
-            float angle = i * 6.28318f / numRays + sceneTimer * 0.3f;
-            float rayLen = 0.8f + (i % 2) * 0.3f;
-            glColor4f(1.0f, 0.8f, 0.3f, fadeIn * 0.4f);
-            glLineWidth(3.0f);
-            glBegin(GL_LINES);
-            glVertex2f(0.0f, 0.15f);
-            glVertex2f(cosf(angle) * rayLen, 0.15f + sinf(angle) * rayLen * 0.5f);
+        // ========== IMPROVED LOGO BACKGROUND ==========
+        
+        // OUTER GLOW - Hot Pink
+        float glowPulse = 1.0f + sinf(sceneTimer * 8.0f) * 0.15f;
+        for (int g = 5; g >= 1; g--) {
+            float glowSize = 0.02f * g * glowPulse;
+            glColor4f(1.0f, 0.2f, 0.5f, fadeIn * 0.15f / g);
+            glBegin(GL_POLYGON);
+            glVertex2f(-0.65f - glowSize, -0.05f - glowSize);
+            glVertex2f(0.65f + glowSize, -0.05f - glowSize);
+            glVertex2f(0.65f + glowSize, 0.4f + glowSize);
+            glVertex2f(-0.65f - glowSize, 0.4f + glowSize);
             glEnd();
         }
+        
+        // SOLID BANNER BACKGROUND - Dark with gradient feel
+        // Main black background
+        glColor4f(0.1f, 0.08f, 0.15f, fadeIn * 0.95f);
+        glBegin(GL_POLYGON);
+        glVertex2f(-0.62f, -0.02f);
+        glVertex2f(0.62f, -0.02f);
+        glVertex2f(0.62f, 0.38f);
+        glVertex2f(-0.62f, 0.38f);
+        glEnd();
+        
+        // Hot Pink border frame
+        glColor4f(1.0f, 0.2f, 0.5f, fadeIn);
+        glLineWidth(6.0f);
+        glBegin(GL_LINE_LOOP);
+        glVertex2f(-0.62f, -0.02f);
+        glVertex2f(0.62f, -0.02f);
+        glVertex2f(0.62f, 0.38f);
+        glVertex2f(-0.62f, 0.38f);
+        glEnd();
+        
+        // Inner border - Electric Blue accent
+        glColor4f(0.1f, 0.6f, 1.0f, fadeIn * 0.8f);
+        glLineWidth(3.0f);
+        glBegin(GL_LINE_LOOP);
+        glVertex2f(-0.58f, 0.02f);
+        glVertex2f(0.58f, 0.02f);
+        glVertex2f(0.58f, 0.34f);
+        glVertex2f(-0.58f, 0.34f);
+        glEnd();
+        
+        // Corner accents - small diamonds
+        float cornerSize = 0.04f;
+        float corners[4][2] = {{-0.62f, -0.02f}, {0.62f, -0.02f}, {0.62f, 0.38f}, {-0.62f, 0.38f}};
+        for (int c = 0; c < 4; c++) {
+            glColor4f(1.0f, 0.8f, 0.2f, fadeIn);  // Gold corners
+            glBegin(GL_POLYGON);
+            glVertex2f(corners[c][0], corners[c][1] + cornerSize);
+            glVertex2f(corners[c][0] + cornerSize, corners[c][1]);
+            glVertex2f(corners[c][0], corners[c][1] - cornerSize);
+            glVertex2f(corners[c][0] - cornerSize, corners[c][1]);
+            glEnd();
+        }
+        
+        // Starburst effect behind text (rotating rays)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+        int numRays = 16;
+        for (int i = 0; i < numRays; i++) {
+            float angle = i * 6.28318f / numRays + sceneTimer * 0.5f;
+            float rayLen = 0.3f + (i % 2) * 0.15f;
+            float rayR = (i % 3 == 0) ? 1.0f : 0.1f;
+            float rayG = (i % 3 == 1) ? 0.6f : 0.2f;
+            float rayB = (i % 3 == 2) ? 1.0f : 0.5f;
+            glColor4f(rayR, rayG, rayB, fadeIn * 0.2f);
+            glLineWidth(4.0f);
+            glBegin(GL_LINES);
+            glVertex2f(0.0f, 0.18f);
+            glVertex2f(cosf(angle) * rayLen, 0.18f + sinf(angle) * rayLen * 0.4f);
+            glEnd();
+        }
+        
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
         // Main title: "KIK BATWOWZKI"
         // Draw shadow/outline first
         glColor4f(0.0f, 0.0f, 0.0f, fadeIn);
-        glLineWidth(6.0f);
+        glLineWidth(8.0f);
         glPushMatrix();
-        glTranslatef(-0.52f, 0.12f, 0.0f);
-        glScalef(0.0007f * scale, 0.001f * scale, 1.0f);
+        glTranslatef(-0.52f, 0.10f, 0.0f);
+        glScalef(0.0007f * scale, 0.0012f * scale, 1.0f);
         const char* title = "KIK BATWOWZKI";
         for (const char* c = title; *c; c++) {
             glutStrokeCharacter(GLUT_STROKE_ROMAN, *c);
         }
         glPopMatrix();
         
-        // Main text - hot pink/magenta gradient
-        glColor4f(1.0f, 0.3f, 0.6f, fadeIn);
-        glLineWidth(4.0f);
+        // Main text - HOT PINK
+        glColor4f(1.0f, 0.2f, 0.55f, fadeIn);
+        glLineWidth(5.0f);
         glPushMatrix();
-        glTranslatef(-0.5f, 0.15f, 0.0f);
-        glScalef(0.0007f * scale, 0.001f * scale, 1.0f);
+        glTranslatef(-0.5f, 0.12f, 0.0f);
+        glScalef(0.0007f * scale, 0.0012f * scale, 1.0f);
         for (const char* c = title; *c; c++) {
             glutStrokeCharacter(GLUT_STROKE_ROMAN, *c);
         }
         glPopMatrix();
         
-        // Inner highlight - white
-        glColor4f(1.0f, 1.0f, 1.0f, fadeIn * 0.7f);
-        glLineWidth(2.0f);
+        // Inner highlight - white shine
+        glColor4f(1.0f, 1.0f, 1.0f, fadeIn * 0.6f);
+        glLineWidth(2.5f);
         glPushMatrix();
-        glTranslatef(-0.49f, 0.16f, 0.0f);
-        glScalef(0.00068f * scale, 0.00098f * scale, 1.0f);
+        glTranslatef(-0.49f, 0.14f, 0.0f);
+        glScalef(0.00068f * scale, 0.00115f * scale, 1.0f);
         for (const char* c = title; *c; c++) {
             glutStrokeCharacter(GLUT_STROKE_ROMAN, *c);
         }

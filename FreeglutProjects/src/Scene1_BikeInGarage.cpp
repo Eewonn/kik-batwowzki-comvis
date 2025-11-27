@@ -105,18 +105,18 @@ void Scene1_BikeInGarage::render() {
         glTranslatef(stickmanX, 0.0f, 0.0f);
         
         if (isRidingOut && stickmanX > bikeX + 1.0f) {
-            // Wheelie when blasting out!
+            // Wheelie when blasting out! Front wheel UP!
             float wheelieProgress = fminf(1.0f, (stickmanX - bikeX - 1.0f) * 0.4f);
             float wheelieAngle = wheelieProgress * 18.0f;
-            glRotatef(-wheelieAngle, 0, 0, 1);
-            drawBike();
-            drawStickmanWheelie(pedalPhase, 0.9f, wheelieAngle * 0.4f);
+            glRotatef(wheelieAngle, 0, 0, 1);  // Positive angle = front wheel UP
+            drawBike(0);  // Hot Pink bike
+            drawStickmanWheelie(pedalPhase, 0.9f, wheelieAngle * 0.4f, 0);
             
             // Speed lines!
             drawSpeedLines(stickmanX - 0.5f, 0.6f, 0.0f, wheelieProgress, 1.0f);
         } else {
-            drawBike();
-            drawStickmanOnBike(pedalPhase, 0.9f);
+            drawBike(0);  // Hot Pink bike
+            drawStickmanOnBike(pedalPhase, 0.9f, 0);
         }
         glPopMatrix();
     } else {
@@ -129,7 +129,7 @@ void Scene1_BikeInGarage::render() {
         // Static bike
         glPushMatrix();
         glTranslatef(bikeX, 0.0f, 0.0f);
-        drawBike();
+        drawBike(0);  // Hot Pink bike
         glPopMatrix();
     }
     

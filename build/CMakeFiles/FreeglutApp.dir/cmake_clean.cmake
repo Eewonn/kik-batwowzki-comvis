@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/FreeglutApp.dir/link.d"
   "CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o"
   "CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.o.d"
-  "CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o"
-  "CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o.d"
   "CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o"
   "CMakeFiles/FreeglutApp.dir/src/DrawingUtils.cpp.o.d"
   "CMakeFiles/FreeglutApp.dir/src/Scene1_BikeInGarage.cpp.o"
@@ -16,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FreeglutApp.dir/src/Scene4_GroupBiking.cpp.o.d"
   "CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.o"
   "CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.o.d"
+  "CMakeFiles/FreeglutApp.dir/src/main.cpp.o"
+  "CMakeFiles/FreeglutApp.dir/src/main.cpp.o.d"
   "FreeglutApp"
   "FreeglutApp.pdb"
 )

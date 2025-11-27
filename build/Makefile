@@ -153,30 +153,6 @@ src/AudioManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/AudioManager.cpp.s
 .PHONY : src/AudioManager.cpp.s
 
-src/DiazGroup_FirstScene_New.o: src/DiazGroup_FirstScene_New.cpp.o
-.PHONY : src/DiazGroup_FirstScene_New.o
-
-# target to build an object file
-src/DiazGroup_FirstScene_New.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.o
-.PHONY : src/DiazGroup_FirstScene_New.cpp.o
-
-src/DiazGroup_FirstScene_New.i: src/DiazGroup_FirstScene_New.cpp.i
-.PHONY : src/DiazGroup_FirstScene_New.i
-
-# target to preprocess a source file
-src/DiazGroup_FirstScene_New.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.i
-.PHONY : src/DiazGroup_FirstScene_New.cpp.i
-
-src/DiazGroup_FirstScene_New.s: src/DiazGroup_FirstScene_New.cpp.s
-.PHONY : src/DiazGroup_FirstScene_New.s
-
-# target to generate assembly for a file
-src/DiazGroup_FirstScene_New.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/DiazGroup_FirstScene_New.cpp.s
-.PHONY : src/DiazGroup_FirstScene_New.cpp.s
-
 src/DrawingUtils.o: src/DrawingUtils.cpp.o
 .PHONY : src/DrawingUtils.o
 
@@ -321,6 +297,30 @@ src/Scene5_FinalPose.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/Scene5_FinalPose.cpp.s
 .PHONY : src/Scene5_FinalPose.cpp.s
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeglutApp.dir/build.make CMakeFiles/FreeglutApp.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -333,9 +333,6 @@ help:
 	@echo "... src/AudioManager.o"
 	@echo "... src/AudioManager.i"
 	@echo "... src/AudioManager.s"
-	@echo "... src/DiazGroup_FirstScene_New.o"
-	@echo "... src/DiazGroup_FirstScene_New.i"
-	@echo "... src/DiazGroup_FirstScene_New.s"
 	@echo "... src/DrawingUtils.o"
 	@echo "... src/DrawingUtils.i"
 	@echo "... src/DrawingUtils.s"
@@ -354,6 +351,9 @@ help:
 	@echo "... src/Scene5_FinalPose.o"
 	@echo "... src/Scene5_FinalPose.i"
 	@echo "... src/Scene5_FinalPose.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

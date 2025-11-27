@@ -51,13 +51,13 @@ void Scene3_MeetingFriends::render() {
     if (stickmanX < -2.0f) {
         // Still coming in fast - speed lines!
         float speedIntensity = fminf(1.0f, (-stickmanX - 2.0f) * 0.3f);
-        drawBike();
-        drawStickmanOnBike(sceneTimer * 5.0f, 0.9f);
+        drawBike(0);  // Hot Pink - main character
+        drawStickmanOnBike(sceneTimer * 5.0f, 0.9f, 0);
         drawSpeedLines(stickmanX - 0.3f, 0.6f, 0.0f, speedIntensity, 1.0f);
     } else {
         // Slowing down for the meet-up
-        drawBike();
-        drawStickmanOnBike(sceneTimer * 2.0f * pedalSpeed, 0.9f);
+        drawBike(0);  // Hot Pink - main character
+        drawStickmanOnBike(sceneTimer * 2.0f * pedalSpeed, 0.9f, 0);
     }
     glPopMatrix();
     
@@ -71,13 +71,13 @@ void Scene3_MeetingFriends::render() {
         
         // Friends do excited idle animation
         float excitement = sinf(sceneTimer * 3.0f + friends[i].idlePhase) * 0.15f;
-        drawBike();
+        drawBike(i + 1);  // Colors: 1=Blue, 2=Green, 3=Orange, 4=Purple
         
         // Victory pose when main character is close
         if (stickmanX > -2.0f && i == 0) {
-            drawStickmanVictory(sceneTimer, helmetHues[i]);
+            drawStickmanVictory(sceneTimer, helmetHues[i], i + 1);
         } else {
-            drawStickmanOnBike(sceneTimer * 2.0f + friends[i].idlePhase, helmetHues[i]);
+            drawStickmanOnBike(sceneTimer * 2.0f + friends[i].idlePhase, helmetHues[i], i + 1);
         }
         glPopMatrix();
     }
